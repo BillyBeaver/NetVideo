@@ -19,7 +19,6 @@ private:
     std::vector<Rental> rentals;
     
 public:
-
     // constructor
     Customer(const std::string& name);
 
