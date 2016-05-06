@@ -41,6 +41,15 @@ int main() {
     assert(movie.getTitle() == "A B");
     assert(movie.getCode() == Video::REGULAR);
   }
+  
+  // very long title
+  {
+    Video movie("A B abcdefghijklmnopqrstuvwxyz ;:{}[]#2@1!)(%^&*", Video::REGULAR);
+
+    assert(movie.getTitle() == "A B abcdefghijklmnopqrstuvwxyz ;:{}[]#2@1!)(%^&*");
+    assert(movie.getCode() == Video::REGULAR);
+  }
+
 
   // change price
   {
