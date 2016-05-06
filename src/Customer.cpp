@@ -29,6 +29,7 @@ void Customer::addRental(const Rental& rental) {
     rentals.push_back(rental);
 }
 
+//calculates rental amount
 double Customer::amountFor(const Rental& r) const {
    double thisAmount = 0;
    switch(r->getVideo().getCode()) {
